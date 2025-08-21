@@ -1,0 +1,7 @@
+expresss js its node js framework for creating admin panel and api.
+
+m- model         Database related/data
+v- view          Designing /html css
+c- controller    bridge between model and view
+
+middleware:bridge 
