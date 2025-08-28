@@ -16,6 +16,17 @@ app.get('/about', (req, res) => {
     res.sendFile(__dirname+'/about.html')
 })
 
+app.get('/contact', (req, res) => {
+    res.sendFile(__dirname+'/contact.html')
+})
+
+app.get('/contactprocess', (req, res) => {
+    var no1 = req.query.txt1
+    var no2 = req.query.txt2
+    var result = parseInt(no1) + parseInt(no2)
+    res.send("Sum is " + result)
+})
+
 app.get('/product/:id',(req,res)=>{
     var a=req.params.id
     res.send("product details is " + a)
