@@ -17,7 +17,6 @@ app.get('/about', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(Example app listening on port ${port})
+  console.log(`Example app listening on port ${port}`)
 })
-
-console.log("Started on http://localhost:3000")
+console.log(`Started on http://localhost:${port}`)
