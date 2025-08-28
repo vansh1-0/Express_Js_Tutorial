@@ -4,4 +4,19 @@ m- model         Database related/data
 v- view          Designing /html css
 c- controller    bridge between model and view
 
-middleware:bridge 
+
+create folder and open in vs code
+create package.json file
+create app.js file and add server code 
+
+in cmd :npm i express
+_________________________
+Query String
+________________________
+?q=iphone 
+
+url will be like:search?q=iphone
+
+parameter
+req.params.id:::to access
+product/1
