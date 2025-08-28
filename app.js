@@ -3,7 +3,8 @@ const app = express()
 const port = 3000
 
 app.use(express.static("public"))//middle man to connect app to public folder's style.css
-
+app.set('view engine', 'ejs')
+app.set('views', __dirname + '/views')
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
@@ -20,7 +21,19 @@ app.get('/contact', (req, res) => {
     res.sendFile(__dirname+'/contact.html')
 })
 
+app.get('/sum', (req, res) => {
+    res.render('sum')
+})
+
+
 app.get('/contactprocess', (req, res) => {
+    var no1 = req.query.txt1
+    var no2 = req.query.txt2
+    var result = parseInt(no1) + parseInt(no2)
+    res.send("Sum is " + result)
+})
+
+app.get('/sumprocess', (req, res) => {
     var no1 = req.query.txt1
     var no2 = req.query.txt2
     var result = parseInt(no1) + parseInt(no2)
